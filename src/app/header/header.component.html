@@ -1,8 +1,8 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand" *ngIf="authService.isAuthenticated()">Recipe book</a>
-      <a routerLink="/signin" class="navbar-brand" *ngIf="!authService.isAuthenticated()">Recipe book</a>
+      <a routerLink="/recipes" class="navbar-brand" *ngIf="authService.isAuthenticated()">Recipe book</a>
+      <a routerLink="/" class="navbar-brand" *ngIf="!authService.isAuthenticated()">Recipe book</a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav" *ngIf="authService.isAuthenticated()">
