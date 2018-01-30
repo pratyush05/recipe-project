@@ -41,17 +41,4 @@ export class ShoppingListService {
     this.ingredients.splice(index, 1);
     this.ingredientChanged.next(this.ingredients.slice());
   }
-
-  private mergeDuplicateIngredients() {
-    for (let i = 0; i < this.ingredients.length - 1; i += 1) {
-      let isAlreadyPresent = false;
-      for (let j = i + 1; j < this.ingredients.length; j += 1) {
-        if (this.ingredients[i].name.toUpperCase() === this.ingredients[j].name.toUpperCase()) {
-          isAlreadyPresent = true;
-          this.ingredients.push(new Ingredient(listIngredient.name.valueOf(),
-            listIngredient.amount.valueOf() + newIngredient.amount.valueOf()));
-        }
-      });
-    });
-  }
 }
